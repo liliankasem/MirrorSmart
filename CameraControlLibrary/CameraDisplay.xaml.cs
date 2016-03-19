@@ -65,7 +65,7 @@
                             await Task.Delay(1000);
                       }
 
-                      this.faceProcessingPaused = true;
+                      //this.faceProcessingPaused = true;
                   }
               }
             );

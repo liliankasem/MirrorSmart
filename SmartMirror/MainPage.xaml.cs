@@ -86,16 +86,16 @@ namespace SmartMirror
 
             if (faceFound)
             {
-               // cameraControl.faceProcessingPaused = true;
+                cameraControl.faceProcessingPaused = true;
 
                 var user = await this.cameraControl.Snap();
                 userName = await IdentifyUser(user);
 
-                //if (userName == "Lilian")
+                if (userName == "Lilian")
                     await GetEventsGmail();
 
-              //  await Task.Delay(10000);
-               // cameraControl.faceProcessingPaused = false;
+               await Task.Delay(10000);
+               cameraControl.faceProcessingPaused = false;
             }
             else
             {
