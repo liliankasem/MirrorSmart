@@ -48,7 +48,7 @@ namespace SmartMirror
             string month = moment.ToString("MMMM");
             int day = moment.Day;
 
-            string date = moment.DayOfWeek + ", " + day + " " + month + " " + year;
+            string date = moment.DayOfWeek + " " + day + " " + month + " " + year;
             DateTextBlock.Text = date;
         }
     }

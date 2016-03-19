@@ -21,7 +21,7 @@
             <control:CameraDisplay x:Name="cameraControl"  xmlns:control="using:CameraControlLibrary" Visibility="Collapsed" />
             <TextBlock Name="TimeTextBlock" FontSize="80" Foreground="White" />
             <TextBlock Name="DateTextBlock" FontSize="20" Foreground="White" />
-            <TextBlock Name="IdentityTextBlock" FontSize="20" Foreground="White" />
+            <TextBlock Name="IdentityTextBlock" FontSize="40" Foreground="White" Margin="0 50 0 0" />
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"  VerticalAlignment="Top" HorizontalAlignment="Right">

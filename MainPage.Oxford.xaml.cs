@@ -97,7 +97,7 @@ namespace SmartMirror
                         var person = await faceServiceClient.GetPersonAsync(personGroup, candidateId);
                         userName = person.Name;
                         Debug.WriteLine("Identified as {0}", userName);
-                        IdentityTextBlock.Text = "Hey there, " + userName + "!";
+                        IdentityTextBlock.Text = "Hey " + userName + "!";
                         await Speak("Hello, " + userName);
                     }
                 }
