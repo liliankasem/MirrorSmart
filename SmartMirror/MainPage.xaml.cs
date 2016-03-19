@@ -94,11 +94,12 @@ namespace SmartMirror
                 if (userName == "Lilian")
                     await GetEventsGmail();
 
-               await Task.Delay(10000);
+               await Task.Delay(5000);
                cameraControl.faceProcessingPaused = false;
             }
             else
             {
+                userName = "";
                 eventsList_txt.Text = "";
                 IdentityTextBlock.Text = "";
             }
