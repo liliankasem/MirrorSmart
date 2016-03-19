@@ -18,8 +18,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <MediaElement x:Name="media" AutoPlay="False"/>
-            <control:CameraDisplay x:Name="cameraControl"  xmlns:control="using:CameraControlLibrary" Visibility="Visible" />
+            <control:CameraDisplay x:Name="cameraControl"  xmlns:control="using:CameraControlLibrary" Visibility="Collapsed" />
             <TextBlock Name="TimeTextBlock" FontSize="80" Foreground="White" />
             <TextBlock Name="DateTextBlock" FontSize="20" Foreground="White" />
             <TextBlock Name="IdentityTextBlock" FontSize="20" Foreground="White" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="LilianKasem.MirrorSmart" Publisher="CN=D93E9539-2C94-4074-B4EB-93698FB3CF0A" Version="1.1.8.0" />
+  <Identity Name="LilianKasem.MirrorSmart" Publisher="CN=D93E9539-2C94-4074-B4EB-93698FB3CF0A" Version="1.1.9.0" />
   <mp:PhoneIdentity PhoneProductId="c7a26551-daf9-4451-a645-d5ab87bb56f0" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Mirror Smart</DisplayName>

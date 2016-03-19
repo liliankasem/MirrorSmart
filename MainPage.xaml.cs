@@ -1,33 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
-using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources.Core;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Globalization;
 using Windows.Graphics.Imaging;
-using Windows.Media.Capture;
 using Windows.Media.FaceAnalysis;
-using Windows.Media.MediaProperties;
 using Windows.Media.SpeechRecognition;
 using Windows.Media.SpeechSynthesis;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using System.Threading.Tasks;
-using Windows.Graphics.Imaging;
 
 
 namespace SmartMirror
@@ -54,13 +37,14 @@ namespace SmartMirror
 
         private async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
+            //Need for project oxford configuration
             //SetupPersonGroup();
-
-            this.cameraControl.SetFaceProcessor(this.ProcessVideoFrame);
 
             //Setup all items
             TimeUpdater();
             await GetWeather();
+
+            this.cameraControl.SetFaceProcessor(this.ProcessVideoFrame);
 
             DispatcherTimerSetup();
 
@@ -88,13 +72,10 @@ namespace SmartMirror
                 var messageDialog = new Windows.UI.Popups.MessageDialog(ex.Message, "Exception");
                 await messageDialog.ShowAsync();
             }
-
         }
 
         async Task ProcessVideoFrame(SoftwareBitmap bitmap)
         {
-            this.cameraControl.ShowCamera(true);
-
             if (this.faceDetector == null)
             {
                 this.faceDetector = await FaceDetector.CreateAsync();
@@ -105,19 +86,21 @@ namespace SmartMirror
 
             if (faceFound)
             {
-                cameraControl.faceProcessingPaused = false;
+               // cameraControl.faceProcessingPaused = true;
+
                 var user = await this.cameraControl.Snap();
                 userName = await IdentifyUser(user);
 
-                if (userName == "Lilian")
+                //if (userName == "Lilian")
                     await GetEventsGmail();
 
-                await Task.Delay(5000);
-                cameraControl.faceProcessingPaused = true;
+              //  await Task.Delay(10000);
+               // cameraControl.faceProcessingPaused = false;
             }
             else
             {
                 eventsList_txt.Text = "";
+                IdentityTextBlock.Text = "";
             }
         }
 

@@ -73,7 +73,7 @@ namespace SmartMirror
 
         private async Task<string> IdentifyUser(string imageName)
         {
-            StorageFolder appFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync("Capture", CreationCollisionOption.OpenIfExists);
+            StorageFolder appFolder = ApplicationData.Current.LocalCacheFolder;
             StorageFile file = await appFolder.GetFileAsync(imageName);
             using (var randomAccessStream = await file.OpenReadAsync())
             using (Stream s = randomAccessStream.AsStreamForRead())
