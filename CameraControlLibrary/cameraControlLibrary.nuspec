@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>cameraControlLibrary</id>
+    <version>1.5</version>
+    <title>Camera Control Library for Automatic Photo Booth Lab</title>
+    <authors>Mike Taulty</authors>
+    <owners>Mike Taulty</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Camera Control Library for Automatic Photo Booth Lab</description>
+    <releaseNotes>One and only version</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+<references>
+<reference file="cameraControlLibrary.dll"/>
+</references>
+  </metadata>
+<files>
+<file src="properties\cameracontrollibrary.rd.xml" target="lib/win50/cameracontrollibrary/properties"/>
+<file src="bin\debug\cameracontrollibrary.pri" target="lib/win50"/>
+<file src="bin\debug\cameracontrollibrary.xr.xml" target="lib/win50/cameracontrollibrary"/>
+<file src="bin\debug\cameradisplay.xbf" target="lib/win50/cameracontrollibrary"/>
+</files>
+</package>
